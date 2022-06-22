@@ -1,7 +1,7 @@
 import axios from "axios";
 
 function Deletedata() {
-    let _id=window.location.href.split('update/')[1];
+    let _id = window.location.href.split('update/')[1];
     const deleteNotes = async () => {
         await axios.delete(`http://localhost:5000/notes/${_id}`)
             .then((response) => {
@@ -13,7 +13,7 @@ function Deletedata() {
     }
     return (
         <>
-            <button onClick={deleteNotes}>delete</button>
+                <button onClick={deleteNotes}>delete</button>
         </>
     );
 }

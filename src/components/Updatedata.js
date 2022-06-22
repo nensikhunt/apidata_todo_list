@@ -26,11 +26,9 @@ function Updatedata() {
     }
     return (
         <>
-            title:
-            <input type={"text"} name={'title'} value={notesData.title} onChange={updatedataChange} required /><br />
-            content:
-            <input type={"text"} name={'content'} value={notesData.content} onChange={updatedataChange} required /><br />
-            <button onClick={updateNotes}>update</button>
+                <input type={"text"} name={'title'} placeholder={"title"} value={notesData.title} onChange={updatedataChange} required />
+                <input type={"text"} name={'content'} placeholder={"content"} value={notesData.content} onChange={updatedataChange} required />
+                <button onClick={updateNotes}>update</button>
         </>
     );
 }

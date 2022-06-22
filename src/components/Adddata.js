@@ -23,11 +23,9 @@ function Adddata() {
 
     return (
         <>
-            title:
-            <input type={"text"} name={'title'} value={notesData.title} onChange={adddataChange} required /><br />
-            content:
-            <input type={"text"} name={'content'} value={notesData.content} onChange={adddataChange} required /><br />
-            <button onClick={addNotes}>add</button>
+                <input type={"text"} name={'title'} placeholder={"title"} value={notesData.title} onChange={adddataChange} required />
+                <input type={"text"} name={'content'} placeholder={"content"} value={notesData.content} onChange={adddataChange} required />
+                <button onClick={addNotes}>add</button>
         </>
     );
 }
