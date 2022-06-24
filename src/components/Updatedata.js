@@ -19,16 +19,22 @@ function Updatedata() {
         await axios.put(`http://localhost:5000/notes/${_id}`, notesData)
             .then((response) => {
                 console.log(response.data);
+                window.location.href="http://localhost:3000";
             })
             .catch((e) => {
                 console.log(e);
             })
+        setnotesData({
+            ...notesData,
+            title: "",
+            content: ""
+        })
     }
     return (
         <>
-                <input type={"text"} name={'title'} placeholder={"title"} value={notesData.title} onChange={updatedataChange} required />
-                <input type={"text"} name={'content'} placeholder={"content"} value={notesData.content} onChange={updatedataChange} required />
-                <button onClick={updateNotes}>update</button>
+            <input type={"text"} name={'title'} placeholder={"title"} value={notesData.title} onChange={updatedataChange} required />
+            <input type={"text"} name={'content'} placeholder={"content"} value={notesData.content} onChange={updatedataChange} required />
+            <button onClick={updateNotes}>update</button>
         </>
     );
 }

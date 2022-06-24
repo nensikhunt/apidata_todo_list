@@ -1,19 +1,26 @@
 import axios from "axios";
+import { useEffect } from "react";
 
-function Deletedata() {
-    let _id = window.location.href.split('update/')[1];
-    const deleteNotes = async () => {
-        await axios.delete(`http://localhost:5000/notes/${_id}`)
-            .then((response) => {
-                alert(`${_id} delete data sucessfully`)
-            })
-            .catch((e) => {
-                console.log(e);
-            })
-    }
+function Deletedata(props) {
+    let _id;
+    useEffect(() => {
+        if (window.location.href.includes("delete")) {
+            _id = window.location.href.split("delete/")[1];
+            console.log(_id);
+            axios.delete(`http://localhost:5000/notes/${_id}`)
+                .then((response) => {
+                    console.log(_id);
+                    window.location.href="http://localhost:3000";
+                })
+                .catch((e) => {
+                    console.log(_id);
+                    console.log(e);
+                })  
+        }
+    }, []);
+
     return (
         <>
-                <button onClick={deleteNotes}>delete</button>
         </>
     );
 }

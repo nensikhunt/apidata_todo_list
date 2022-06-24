@@ -15,17 +15,25 @@ function Adddata() {
         await axios.post("http://localhost:5000/notes", notesData)
             .then((response) => {
                 console.log(response.data);
+                window.location.href="http://localhost:3000";
             })
             .catch((e) => {
                 console.log(e);
             })
+            window.location.reload();
+
+        setnotesData({
+            ...notesData,
+            title: "",
+            content: ""
+        })
     }
 
     return (
         <>
-                <input type={"text"} name={'title'} placeholder={"title"} value={notesData.title} onChange={adddataChange} required />
-                <input type={"text"} name={'content'} placeholder={"content"} value={notesData.content} onChange={adddataChange} required />
-                <button onClick={addNotes}>add</button>
+            <input type={"text"} name={'title'} placeholder={"title"} value={notesData.title} onChange={adddataChange} />
+            <input type={"text"} name={'content'} placeholder={"content"} value={notesData.content} onChange={adddataChange} />
+            <button onClick={addNotes}><i className={"fa fa-plus"}></i></button>
         </>
     );
 }

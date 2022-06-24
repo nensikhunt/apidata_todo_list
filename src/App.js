@@ -17,9 +17,10 @@ function App() {
   return (
     <div className="App">
       {
-        display === true ? <> <Updatedata /> <Deletedata /> </> : <Adddata />
+        display === true ? <Updatedata /> : <Adddata />
       }
       <Getdata />
+      <Deletedata />
     </div>
   );
 }

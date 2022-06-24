@@ -13,3 +13,11 @@ input,button{
   margin:3px;
   padding: 5px;
 }
+a{
+  text-decoration: none;
+  color: black;
+}
+i,input{
+  padding-left: 20px;
+  padding-right: 20px;
+}
