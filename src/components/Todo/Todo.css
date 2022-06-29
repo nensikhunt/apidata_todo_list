@@ -1,0 +1,13 @@
+.outer-div{
+    display: flex;
+}
+.main-div,input,h1{
+    margin-left: 20px;
+}
+.inner-div{
+    width: 200px;
+    padding: 5px;
+}
+input{
+    width: 280px;
+}
