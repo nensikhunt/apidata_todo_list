@@ -1,11 +1,11 @@
 // import './App.css';
-// import Todo from './components/Todo';
+import Todo from './components/Todo';
 // import Deletedata from './components/Deletedata';
 // import Updatedata from './components/Updatedata';
 // import Adddata from './components/Adddata';
 // import Getdata from './components/Getdata';
 // import { useEffect, useState } from 'react'; 
-import Todo1 from './components/Todo/Todo';
+// import Todo1 from './components/Todo/Todo';
 
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
   // );
   return (
     <>
-      {/* <Todo /> */}
-      <Todo1 />
+      <Todo />
+      {/* <Todo1 /> */}
     </>
   )
 }
